@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
   font-family: sans-serif;
   padding: 2rem;
   background-color: #f2f2f2;
@@ -18,6 +19,7 @@ const Container = styled.div`
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1600px;
 `;
 
 const Heading = styled.h1`

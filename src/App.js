@@ -25,11 +25,26 @@ const Heading = styled.h1`
   margin-bottom: 2rem;
 `;
 
-const Loading = styled.div`
-  font-size: 24px;
-  text-align: center;
+const SpinnerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 100px;
-  color: #666;
+`;
+
+const Spinner = styled.div`
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 `;
 
 class App extends Component {
@@ -117,9 +132,9 @@ class App extends Component {
 
   render() {
     return this.state.loading ? (
-      <Wrapper>
-        <Loading>Loading...</Loading>
-      </Wrapper>
+      <SpinnerWrapper>
+        <Spinner />
+      </SpinnerWrapper>
     ) : (
       <Wrapper>
         <Container>

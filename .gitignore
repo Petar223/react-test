@@ -4,3 +4,6 @@
 # Build output
 /dist/
 /build/
+
+# Generated files
+package-lock.json
